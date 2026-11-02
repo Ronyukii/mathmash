@@ -6,17 +6,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('MathMash'),
-        centerTitle: true,
-      ),
+      appBar: AppBar(title: const Text('MathMash'), centerTitle: true),
       body: const Center(
         child: Text(
           'Welcome to MathMash!',
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
       ),
     );

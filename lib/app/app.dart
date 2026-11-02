@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../screens/home_screen.dart';
+import '../screens/home/home_screen.dart';
 
 class MathMashApp extends StatelessWidget {
   const MathMashApp({super.key});
@@ -10,9 +10,7 @@ class MathMashApp extends StatelessWidget {
       title: 'MathMash',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
-        ),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       home: const HomeScreen(),
