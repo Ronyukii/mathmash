@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../lessons/algebra_intro_screen.dart';
+import '../exercises/exercise_screen.dart';
+import '../../data/algebra_exercises.dart';
 import '../../theme/app_colors.dart';
 
 class LearningMapScreen extends StatelessWidget {
@@ -345,7 +347,12 @@ class LearningMapScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const AlgebraIntroScreen(),
+                        builder: (context) => const ExerciseScreen(
+                          title: 'Algebra Basics',
+                          topic: 'Meet Algebra',
+                          exerciseId: 'algebra_basics',
+                          questions: algebraBasicsQuestions, topicId: '',
+                        ),
                       ),
                     );
                   },

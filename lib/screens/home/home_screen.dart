@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../learning/learning_map_screen.dart';
+import '../../widgets/progress_summary_card.dart';
 import '../../theme/app_colors.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -140,6 +141,7 @@ class _DashboardTab extends StatelessWidget {
                         fontSize: 13,
                       ),
                     ),
+                    const ProgressSummaryCard(),
                   ],
                 ),
               ),
