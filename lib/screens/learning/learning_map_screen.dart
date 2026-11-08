@@ -1,6 +1,5 @@
-
 import 'package:flutter/material.dart';
-
+import '../lessons/algebra_intro_screen.dart';
 import '../../theme/app_colors.dart';
 
 class LearningMapScreen extends StatelessWidget {
@@ -343,11 +342,10 @@ class LearningMapScreen extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.pop(context);
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text(
-                          'Lesson content will be added in the next phase.',
-                        ),
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const AlgebraIntroScreen(),
                       ),
                     );
                   },
