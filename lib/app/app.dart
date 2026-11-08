@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../screens/auth/sign_in_screen.dart';
 import '../screens/auth/sign_up_screen.dart';
 import '../screens/auth/welcome_screen.dart';
+import '../screens/home/home_screen.dart';
 import '../theme/app_theme.dart';
 import 'routes.dart';
 
@@ -20,6 +21,7 @@ class MathMashApp extends StatelessWidget {
         AppRoutes.welcome: (context) => const WelcomeScreen(),
         AppRoutes.signIn: (context) => const SignInScreen(),
         AppRoutes.signUp: (context) => const SignUpScreen(),
+        AppRoutes.home: (context) => const HomeScreen(),
       },
     );
   }

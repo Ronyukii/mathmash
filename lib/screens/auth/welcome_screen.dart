@@ -55,51 +55,75 @@ class WelcomeScreen extends StatelessWidget {
                           const LightbulbIllustration(),
                         ],
                       ),
-                      const SizedBox(height: 115),
+                      const SizedBox(height: 100),
                       Center(
                         child: ConstrainedBox(
                           constraints: const BoxConstraints(maxWidth: 340),
                           child: Column(
                             children: [
-                              SizedBox(
-                                width: double.infinity,
-                                child: ElevatedButton(
-                                  onPressed: () => Navigator.pushNamed(
-                                    context,
-                                    AppRoutes.signIn,
-                                  ),
-                                  child: const Text('Sign In'),
+                              ElevatedButton(
+                                onPressed: () => Navigator.pushNamed(
+                                  context,
+                                  AppRoutes.signIn,
                                 ),
+                                child: const Text('Sign In'),
                               ),
-                              const SizedBox(height: 16),
-                              const Text(
-                                'Don’t have an account?',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: AppColors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w700,
-                                ),
-                              ),
+                              const SizedBox(height: 14),
                               TextButton(
                                 onPressed: () => Navigator.pushNamed(
                                   context,
                                   AppRoutes.signUp,
                                 ),
                                 child: const Text(
-                                  'Sign Up',
+                                  'Don’t have an account? Sign Up',
                                   style: TextStyle(
                                     color: AppColors.blue,
-                                    fontSize: 19,
-                                    fontWeight: FontWeight.w800,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w700,
                                   ),
+                                ),
+                              ),
+                              const SizedBox(height: 8),
+                              OutlinedButton(
+                                onPressed: () => Navigator.pushNamedAndRemoveUntil(
+                                  context,
+                                  AppRoutes.home,
+                                  (route) => false,
+                                ),
+                                style: OutlinedButton.styleFrom(
+                                  foregroundColor: AppColors.white,
+                                  side: const BorderSide(
+                                    color: AppColors.white,
+                                    width: 1.4,
+                                  ),
+                                  minimumSize: const Size(double.infinity, 52),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                ),
+                                child: const Text(
+                                  'Continue as Guest',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(height: 12),
+                              const Text(
+                                'You can create an account later to sync your progress across devices.',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: AppColors.white,
+                                  fontSize: 12,
+                                  height: 1.4,
                                 ),
                               ),
                             ],
                           ),
                         ),
                       ),
-                      const SizedBox(height: 90),
+                      const SizedBox(height: 60),
                     ],
                   ),
                 ),
