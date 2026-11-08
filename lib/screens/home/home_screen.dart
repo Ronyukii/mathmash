@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import '../learning/learning_map_screen.dart';
 import '../../theme/app_colors.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,7 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   static const List<Widget> _pages = [
     _DashboardTab(),
-    _LearningTab(),
+    LearningMapScreen(),
     _ChallengesTab(),
     _ProgressTab(),
     _ProfileTab(),

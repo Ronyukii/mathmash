@@ -73,6 +73,35 @@ flutter doctor
 
 Replace `USERNAME` with the GitHub account or organization that owns the repository.
 
+### Testing on Devices (Android)
+
+1. Navigate to mathmash folder and open cmd,
+
+   ```bash
+   flutter devices
+   ```
+
+2. If your device appears, you can run
+
+   ```bash
+   flutter run
+   ```
+
+3. For a standalone installation package, run
+
+   ```bash
+   flutter build apk --release
+   ```
+
+   Your apk will be generated at: build/app/outputs/flutter-apk/app-release.apk
+
+   You can also install it directly through ADB:
+
+   ```bash
+   adb install build/app/outputs/flutter-apk/app-release.apk
+   ```
+
+
 ## Project Structure
 
 ```text
