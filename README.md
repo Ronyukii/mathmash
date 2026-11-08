@@ -74,6 +74,7 @@ flutter doctor
 Replace `USERNAME` with the GitHub account or organization that owns the repository.
 
 ### Testing on Devices (Android)
+You will need to connect your Android device via USB
 
 1. Navigate to mathmash folder and open cmd,
 
