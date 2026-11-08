@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-import '../screens/home/home_screen.dart';
+
+import '../screens/auth/sign_in_screen.dart';
+import '../screens/auth/sign_up_screen.dart';
+import '../screens/auth/welcome_screen.dart';
+import '../theme/app_theme.dart';
+import 'routes.dart';
 
 class MathMashApp extends StatelessWidget {
   const MathMashApp({super.key});
@@ -9,11 +14,13 @@ class MathMashApp extends StatelessWidget {
     return MaterialApp(
       title: 'MathMash',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const HomeScreen(),
+      theme: AppTheme.lightTheme,
+      initialRoute: AppRoutes.welcome,
+      routes: {
+        AppRoutes.welcome: (context) => const WelcomeScreen(),
+        AppRoutes.signIn: (context) => const SignInScreen(),
+        AppRoutes.signUp: (context) => const SignUpScreen(),
+      },
     );
   }
 }
